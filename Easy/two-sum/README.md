@@ -8,6 +8,15 @@
 
 ---
 
+## Solution Overview
+
+- **Approach**: `Hash Table`
+- **Time Complexity**: `O(N)`
+- **Space Complexity**: `O(N)`
+- **Key Idea**: The key idea is to build a hash table that maps each number in the input array to its index. Then, for each number, we calculate its complement with respect to the target sum and check if the complement exists in the hash table. If it does, and the indices are different, we return the pair of indices.
+
+- **Considerations**: When building the hash table, we consider the case where the input array contains duplicate numbers. In this case, we need to ensure that we return the correct pair of indices. Additionally, we need to consider the case where the input array is empty or contains only one element, in which case there is no solution.
+- **Optimization Notes**: The time complexity of the solution is O(N) because we are iterating over the input array twice: once to build the hash table and once to find the complement. The hash table operations (insertion and lookup) take constant time on average, so they do not affect the overall time complexity.
 
 ## Source Code (C++)
 
